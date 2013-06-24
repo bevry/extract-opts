@@ -5,7 +5,7 @@ eachr = require('eachr')
 {extractOpts} = require('../..')
 
 # Test
-joe.describe 'safefs', (describe,it) ->
+joe.describe 'extract-opts', (describe,it) ->
 	# Prepare
 	cb = ->
 	fixtures =
