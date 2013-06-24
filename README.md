@@ -1,50 +1,51 @@
-# Benjamin Lupton's Utility Functions
+# Extract Opts
 
-[![Build Status](https://secure.travis-ci.org/balupton/bal-util.png?branch=master)](http://travis-ci.org/balupton/bal-util)
-[![NPM version](https://badge.fury.io/js/bal-util.png)](https://npmjs.org/package/bal-util)
+[![Build Status](https://secure.travis-ci.org/bevry/extract-opts.png?branch=master)](http://travis-ci.org/bevry/extract-opts)
+[![NPM version](https://badge.fury.io/js/extract-opts.png)](https://npmjs.org/package/extract-opts)
 [![Flattr this project](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr)
 
-Common utility functions for Node.js used and maintained by Benjamin Lupton
+Extract the options and callback from a function's arguments easily
 
 
 
 ## Install
 
-### Backend
-
 1. [Install Node.js](http://bevry.me/node/install)
-2. `npm install --save bal-util`
-
-### Frontend
-
-1. [See Browserify](http://browserify.org/)
+2. `npm install --save extract-opts`
 
 
 
 ## Usage
-Best off looking at source, it's well documented, and there are plenty of tests
 
+``` javascript
+var extractOpts = require('extract-opts').extractOpts;
 
+// fs.readFile(filename, [options], callback)
+var readFile = function(filename, opts, callback){
+	// Extract options and callback
+	var args = extractOpts(opts, callback);
+	opts = args[0];
+	callback = args[1];
 
-## Future
-We're in the process of abstracting the pieces of bal-util out into their own modules. So far, we've done the following:
+	// Forward for simplicities sake
+	require('fs').readFile(filename, opts, callback);
+};
 
-- [ambi](https://github.com/bevry/ambi) < `balUtilFlow.fireWithOptionalCallback`
-- [eachr](https://github.com/bevry/eachr) < `balUtilFlow.each`
-- [extendr](https://github.com/bevry/extendr) < `balUtilFlow.(extend|clone|etc)`
-- [getsetdeep](https://github.com/bevry/getsetdeep) < `balUtilFlow.(get|set)Deep`
-- [safeCallback](https://github.com/bevry/safecallback) < `balUtilFlow.safeCallback`
-- [safefs](https://github.com/bevry/safefs) < `balUtilPaths.(openFile|closeFile|etc)`
-- [TaskGroup](https://github.com/bevry/taskgroup) < `balUtilFlow.Group`
-- [typeChecker](https://github.com/bevry/typechecker) < `balUtilTypes`
+// Test it
+var next = console.log.bind(console);
+readFile('package.json', next);         // works with no options
+readFile('package.json', null, next);   // works with null options
+readFile('package.json', {next:next});  // works with just options
+```
 
 
 
 ## History
-You can discover the history inside the [History.md](https://github.com/balupton/bal-util/blob/master/History.md#files) file
+[You can discover the history inside the `History.md` file](https://github.com/bevry/extract-opts/blob/master/History.md#files)
 
 
 
 ## License
 Licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
-<br/>Copyright © 2011+ [Benjamin Arthur Lupton](http://balupton.com)
+<br/>Copyright © 2013+ [Bevry Pty Ltd](http://bevry.me)
+<br/>Copyright © 2011-2012 [Benjamin Arthur Lupton](http://balupton.com)

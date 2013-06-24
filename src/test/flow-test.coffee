@@ -1,22 +1,35 @@
 # Import
-{expect,assert} = require('chai')
+{expect} = require('chai')
 joe = require('joe')
-balUtil = require('../../')
+eachr = require('eachr')
+{extractOpts} = require('../..')
 
+# Test
+joe.describe 'safefs', (describe,it) ->
+	# Prepare
+	cb = ->
+	fixtures =
+		empty:
+			in:  []
+			out: [{}, null]
+		opts:
+			in:  [{a:1}]
+			out: [{a:1}, null]
+		cb:
+			in:  [null, cb]
+			out: [{}, cb]
+		both:
+			in:  [{a:1}, cb]
+			out: [{a:1}, cb]
+		mixed:
+			in:  [{a:1, next:cb}]
+			out: [{a:1}, cb]
+		rename:
+			in:  [{a:1, asd:cb}, null, {completionCallbackNames:['asd']}]
+			out: [{a:1}, cb]
 
-# =====================================
-# Tests
-
-wait = (delay,fn) -> setTimeout(fn,delay)
-
-# -------------------------------------
-# Flow
-
-joe.describe 'misc', (describe,it) ->
-
-	it 'should suffix arrays', (done) ->
-		# Prepare
-		expected = ['ba','ca','da','ea']
-		actual = balUtil.suffixArray('a', 'b', ['c', 'd'], 'e')
-		assert.deepEqual(expected, actual, 'actual was as expected')
-		done()
+	# Test
+	eachr fixtures, (value,key) ->
+		it key, ->
+			actual = extractOpts.apply(extractOpts, value.in)
+			expect(actual).to.deep.equal(value.out)
