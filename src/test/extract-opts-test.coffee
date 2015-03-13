@@ -2,7 +2,7 @@
 {expect} = require('chai')
 joe = require('joe')
 eachr = require('eachr')
-{extractOpts} = require('../..')
+extractOpts = require('../..')
 
 # Test
 joe.describe 'extract-opts', (describe,it) ->
