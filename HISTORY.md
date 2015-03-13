@@ -1,5 +1,8 @@
 # History
 
+## v3.0.1 March 13, 2015
+- Republished
+
 ## v3.0.0 March 13, 2015
 - Simplified export
 - Updated dependencies

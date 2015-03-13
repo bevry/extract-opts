@@ -37,6 +37,15 @@ Extract the options and callback from a function's arguments easily
 - Use: `require('extract-opts')`
 - Install: `npm install --save extract-opts`
 
+### [Browserify](http://browserify.org/)
+- Use: `require('extract-opts')`
+- Install: `npm install --save extract-opts`
+- CDN URL: `//wzrd.in/bundle/extract-opts@3.0.1`
+
+### [Ender](http://enderjs.com)
+- Use: `require('extract-opts')`
+- Install: `ender add extract-opts`
+
 <!-- /INSTALL -->
 
 
