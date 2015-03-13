@@ -1,5 +1,5 @@
 {
-  "title": "Extract Options",
+  "title": "Extract Options & Callback",
   "name": "extract-opts",
   "version": "3.0.1",
   "description": "Extract the options and callback from a function's arguments easily",

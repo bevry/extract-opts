@@ -1,7 +1,7 @@
 
 <!-- TITLE/ -->
 
-# Extract Options
+# Extract Options & Callback
 
 <!-- /TITLE -->
 
@@ -54,12 +54,13 @@ Extract the options and callback from a function's arguments easily
 ### JavaScript
 
 ``` javascript
-var extractOpts = require('extract-opts')
+var extractOptsAndCallback = require('extract-opts')
+var log = console.log.bind(console)
 
 // fs.readFile(filename, [options], callback)
 var readFile = function(filename, opts, next){
 	// Extract options and callback
-	var args = extractOpts(opts, next)
+	var args = extractOptsAndCallback(opts, next)
 	opts = args[0]
 	next = args[1]
 
@@ -68,30 +69,51 @@ var readFile = function(filename, opts, next){
 }
 
 // Test it
-var next = console.log.bind(console)
-readFile('package.json', next)          // works with no options
-readFile('package.json', null, next)    // works with null options
-readFile('package.json', {next:next})   // works with just options
+readFile('package.json', log)          // works with no options
+readFile('package.json', null, log)    // works with null options
+readFile('package.json', {next:log})   // works with just options
 ```
 
 ### CoffeeScript
 
 ``` coffeescript
-extractOpts = require('extract-opts')
+extractOptsAndCallback = require('extract-opts')
+log = console.log.bind(console)
 
 # fs.readFile(filename, [options], callback)
 readFile = (filename, opts, next) ->
 	# Extract options and callback
-	[opts, next] = extractOpts(opts, next)
+	[opts, next] = extractOptsAndCallback(opts, next)
 
 	# Forward for simplicities sake
 	require('fs').readFile(filename, opts, next)
 
 # Test it
-next = console.log.bind(console)
-readFile('package.json', next)          # works with no options
-readFile('package.json', null, next)    # works with null options
-readFile('package.json', {next})        # works with just options
+readFile('package.json', log)          # works with no options
+readFile('package.json', null, log)    # works with null options
+readFile('package.json', {next:log})   # works with just options
+```
+
+### Configuration
+
+Extract Options and Callback also supports a third argument for custom `configuration`.
+
+You can use this third argument to customize the `completionCallbackNames` property that defaults to `['next']`.
+This is useful if your completion callback has other names besides `next`.
+Allowing you to do the following:
+
+``` coffeescript
+extractOptsAndCallback = (opts, next, config={}) ->
+	config.completionCallbackNames ?= ['next', 'complete', 'done']
+	return require('extract-opts')(opts, next, config)
+log = console.log.bind(console)
+
+# The readFile method as before
+
+# Test it
+readFile('package.json', {next:log})        # works the standard completion callback name
+readFile('package.json', {complete:log})    # works with our custom compeltion callback name
+readFile('package.json', {done:log})        # works with our custom compeltion callback name
 ```
 
 
