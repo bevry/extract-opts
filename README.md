@@ -51,25 +51,47 @@ Extract the options and callback from a function's arguments easily
 
 ## Usage
 
+### JavaScript
+
 ``` javascript
 var extractOpts = require('extract-opts')
 
 // fs.readFile(filename, [options], callback)
-var readFile = function(filename, opts, callback){
+var readFile = function(filename, opts, next){
 	// Extract options and callback
-	var args = extractOpts(opts, callback)
+	var args = extractOpts(opts, next)
 	opts = args[0]
-	callback = args[1]
+	next = args[1]
 
 	// Forward for simplicities sake
-	require('fs').readFile(filename, opts, callback)
-};
+	require('fs').readFile(filename, opts, next)
+}
 
 // Test it
 var next = console.log.bind(console)
 readFile('package.json', next)          // works with no options
 readFile('package.json', null, next)    // works with null options
 readFile('package.json', {next:next})   // works with just options
+```
+
+### CoffeeScript
+
+``` coffeescript
+extractOpts = require('extract-opts')
+
+# fs.readFile(filename, [options], callback)
+readFile = (filename, opts, next) ->
+	# Extract options and callback
+	[opts, next] = extractOpts(opts, next)
+
+	# Forward for simplicities sake
+	require('fs').readFile(filename, opts, next)
+
+# Test it
+next = console.log.bind(console)
+readFile('package.json', next)          # works with no options
+readFile('package.json', null, next)    # works with null options
+readFile('package.json', {next})        # works with just options
 ```
 
 
