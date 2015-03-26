@@ -177,7 +177,7 @@ Unless stated otherwise all works are:
 
 and licensed under:
 
-- The #{type} License
+- The incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://opensource.org/licenses/mit-license.php)
 
 <!-- /LICENSE -->
 

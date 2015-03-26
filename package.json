@@ -5,6 +5,9 @@
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "browsers": true,
+  "license": {
+    "type": "MIT"
+  },
   "keywords": [
     "opts",
     "options",
@@ -67,8 +70,5 @@
   "main": "./out/lib/extract-opts.js",
   "cakeConfiguration": {
     "COFFEE_SRC_PATH": "src"
-  },
-  "license": {
-    "type": ""
   }
 }
