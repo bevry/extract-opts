@@ -4,7 +4,6 @@
   "version": "3.1.0",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
-  "browsers": true,
   "license": "MIT",
   "keywords": [
     "opts",
@@ -62,6 +61,7 @@
   "engines": {
     "node": ">=0.12"
   },
+  "browsers": true,
   "main": "./esnextguardian.js",
   "browser": "./es5/lib/index.js",
   "jspm": {
