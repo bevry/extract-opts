@@ -4,6 +4,7 @@
 - Converted from CoffeeScript to ESNext
 - Updated internal conventions
 - Updated minimum supported node version from 0.4 to 0.12
+- [This release was live coded. You can watch it here.](https://plus.google.com/u/0/b/100631142988286661025/events/c9k1pidfui89hfa39cr5831dmi8)
 
 ## v3.0.1 2015 March 13
 - Republished
