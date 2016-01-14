@@ -65,7 +65,7 @@
     "lib": "./out/lib"
   },
   "scripts": {
-    "test": "node ./out/test/extract-opts-test.js"
+    "test": "node ./out/test/index.js"
   },
   "main": "./out/lib/extract-opts.js",
   "cakeConfiguration": {
