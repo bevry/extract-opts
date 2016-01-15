@@ -68,7 +68,7 @@
     "main": "./es5/lib/index.js"
   },
   "dependencies": {
-    "eachr": "^3.1.0",
+    "eachr": "^3.1.1",
     "esnextguardian": "^1.2.0",
     "typechecker": "^4.0.1"
   },
