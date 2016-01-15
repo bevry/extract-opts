@@ -1,5 +1,8 @@
 # History
 
+## v3.2.0 2016 January 14
+- Minimum supported node version has gone from 0.12 to node 0.10
+
 ## v3.1.0 2016 January 14
 - Converted from CoffeeScript to ESNext
 - Updated internal conventions

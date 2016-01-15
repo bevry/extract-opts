@@ -2,6 +2,7 @@
 
 // Import
 const typeChecker = require('typechecker')
+const eachr = require('eachr')
 
 // Define
 module.exports = function (opts, next, config = {}) {
@@ -26,11 +27,17 @@ module.exports = function (opts, next, config = {}) {
 
 	// Completion callback
 	if ( !next ) {
-		for ( const completionCallbackName of config.completionCallbackNames ) {
-			next = opts[completionCallbackName]
-			delete opts[completionCallbackName]
-			if ( next )  break
-		}
+		// Cycle the completionCallbackNames to check if the completion callback name exists in opts
+		// if it does, then use it as the next and delete it's value
+		eachr(config.completionCallbackNames, function (completionCallbackName) {
+			if ( typeof opts[completionCallbackName] !== 'undefined' ) {
+				next = opts[completionCallbackName]
+				delete opts[completionCallbackName]
+				return false  // break
+				// ^ why this only does the first, and not all, using the last, I don't know ...
+				// can be changed in a future major update
+			}
+		})
 	}
 
 	// Ensure
