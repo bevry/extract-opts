@@ -37,30 +37,38 @@ Extract the options and callback from a function's arguments easily
 
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>NPM</h3></a><ul>
 <li>Install: <code>npm install --save extract-opts</code></li>
-<li>Use: <code>require('extract-opts')</code></li></ul>
+<li>Module: <code>require('extract-opts')</code></li></ul>
 
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save extract-opts</code></li>
-<li>Use: <code>require('extract-opts')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/extract-opts@3.2.0</code></li></ul>
+<li>Module: <code>require('extract-opts')</code></li>
+<li>CDN URL: <code>//wzrd.in/bundle/extract-opts@3.3.0</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add extract-opts</code></li>
-<li>Use: <code>require('extract-opts')</code></li></ul>
+<li>Module: <code>require('extract-opts')</code></li></ul>
+
+<h3><a href="https://github.com/bevry/editions" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
+
+<p>This package is published with the following editions:</p>
+
+<ul><li><code>extract-opts</code> aliases <code>extract-opts/index.js</code> which uses <a href="https://github.com/bevry/editions" title="Editions are the best way to produce and consume packages you care about.">Editions</a> to automatically select the correct edition for the consumers environment</li>
+<li><code>extract-opts/source/index.js</code> is Source + <a href="https://babeljs.io/docs/learn-es2015/" title="ECMAScript Next">ESNext</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li>
+<li><code>extract-opts/es2015/index.js</code> is <a href="https://babeljs.io" title="The compiler for writing next generation JavaScript">Babel</a> Compiled + <a href="http://babeljs.io/docs/plugins/preset-es2015/" title="ECMAScript 2015">ES2015</a> + <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a></li></ul>
+
+<p>Older environments may need <a href="https://babeljs.io/docs/usage/polyfill/" title="A polyfill that emulates missing ECMAScript environment features">Babel's Polyfill</a> or something similar.</p>
 
 <!-- /INSTALL -->
 
 
 ## Usage
 
-### JavaScript
-
 ``` javascript
-var extractOptsAndCallback = require('extract-opts')
 var log = console.log.bind(console)
+var extractOptsAndCallback = require('extract-opts')
 
 // fs.readFile(filename, [options], callback)
-var readFile = function(filename, opts, next){
+function readFile (filename, opts, next) {
 	// Extract options and callback
 	var args = extractOptsAndCallback(opts, next)
 	opts = args[0]
@@ -73,49 +81,30 @@ var readFile = function(filename, opts, next){
 // Test it
 readFile('package.json', log)          // works with no options
 readFile('package.json', null, log)    // works with null options
-readFile('package.json', {next:log})   // works with just options
+readFile('package.json', {next: log})   // works with just options
 ```
 
-### CoffeeScript
+### Customisation
 
-``` coffeescript
-extractOptsAndCallback = require('extract-opts')
-log = console.log.bind(console)
-
-# fs.readFile(filename, [options], callback)
-readFile = (filename, opts, next) ->
-	# Extract options and callback
-	[opts, next] = extractOptsAndCallback(opts, next)
-
-	# Forward for simplicities sake
-	require('fs').readFile(filename, opts, next)
-
-# Test it
-readFile('package.json', log)          # works with no options
-readFile('package.json', null, log)    # works with null options
-readFile('package.json', {next:log})   # works with just options
-```
-
-### Configuration
-
-Extract Options and Callback also supports a third argument for custom `configuration`.
-
+Extract Options and Callback also supports a third argument.
 You can use this third argument to customize the `completionCallbackNames` property that defaults to `['next']`.
 This is useful if your completion callback has other names besides `next`.
 Allowing you to do the following:
 
-``` coffeescript
-extractOptsAndCallback = (opts, next, config={}) ->
-	config.completionCallbackNames ?= ['next', 'complete', 'done']
+``` javascript
+var log = console.log.bind(console)
+function extractOptsAndCallback (opts, next, config) {
+	if ( config == null )  config = {}
+	if ( config.completionCallbackNames == null )  config.completionCallbackNames = ['next', 'complete', 'done']
 	return require('extract-opts')(opts, next, config)
-log = console.log.bind(console)
+}
 
 # The readFile method as before
 
 # Test it
-readFile('package.json', {next:log})        # works the standard completion callback name
-readFile('package.json', {complete:log})    # works with our custom compeltion callback name
-readFile('package.json', {done:log})        # works with our custom compeltion callback name
+readFile('package.json', {next: log})        # works the standard completion callback name
+readFile('package.json', {complete: log})    # works with our custom completion callback name
+readFile('package.json', {done: log})        # works with our custom completion callback name
 ```
 
 
@@ -145,7 +134,7 @@ readFile('package.json', {done:log})        # works with our custom compeltion c
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/extract-opts/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/extract-opts">view contributions</a></li></ul>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/extract-opts/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/extract-opts">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -162,7 +151,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/extract-opts/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/extract-opts">view contributions</a></li>
+<ul><li><a href="https://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/extract-opts/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/extract-opts">view contributions</a></li>
 <li><a href="http://seanfridman.com">Sean Fridman</a> — <a href="https://github.com/bevry/extract-opts/commits?author=sfrdmn" title="View the GitHub contributions of Sean Fridman on repository bevry/extract-opts">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/extract-opts/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
@@ -177,7 +166,7 @@ These amazing people have contributed code to this project:
 Unless stated otherwise all works are:
 
 <ul><li>Copyright &copy; 2013+ <a href="http://bevry.me">Bevry Pty Ltd</a></li>
-<li>Copyright &copy; 2011+ <a href="http://balupton.com">Benjamin Lupton</a></li></ul>
+<li>Copyright &copy; 2011+ <a href="https://balupton.com">Benjamin Lupton</a></li></ul>
 
 and licensed under:
 

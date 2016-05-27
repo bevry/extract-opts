@@ -1,5 +1,9 @@
 # History
 
+## v3.3.0 2016 May 27
+- Updated internal conventions
+  - Moved from [ESNextGuardian](https://github.com/bevry/esnextguardian) to [Editions](https://github.com/bevry/editions)
+
 ## v3.2.0 2016 January 15
 - Minimum supported node version has gone from 0.12 to node 0.10
 

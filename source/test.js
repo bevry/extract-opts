@@ -1,11 +1,10 @@
 /* eslint key-spacing:0 */
-'use strict'
 
 // Import
 const deepEqual = require('assert-helpers').deepEqual
 const joe = require('joe')
 const eachr = require('eachr')
-const extractOpts = require('../..')
+const extractOpts = require('../')
 
 // Test
 joe.describe('extract-opts', function (describe, it) {
@@ -33,7 +32,7 @@ joe.describe('extract-opts', function (describe, it) {
 			out: [{a:1}, cb]
 		},
 		rename: {
-			in:  [{a:1, asd:cb}, null, {completionCallbackNames:['asd']}],
+			in:  [{a:1, asd:cb}, null, {completionCallbackNames: ['asd']}],
 			out: [{a:1}, cb]
 		}
 	}
