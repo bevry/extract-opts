@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "MIT",
@@ -70,11 +70,9 @@
         "javascript",
         "esnext",
         "require",
-        "let",
         "const",
         "destructuring",
-        "defaults",
-        "template strings"
+        "defaults"
       ]
     },
     {

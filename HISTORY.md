@@ -1,5 +1,9 @@
 # History
 
+## v3.3.1 2016 May 27
+- Updated internal conventions
+  - Corrected edition syntaxes
+
 ## v3.3.0 2016 May 27
 - Updated internal conventions
   - Moved from [ESNextGuardian](https://github.com/bevry/esnextguardian) to [Editions](https://github.com/bevry/editions)

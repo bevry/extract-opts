@@ -42,7 +42,7 @@ Extract the options and callback from a function's arguments easily
 <a href="http://browserify.org" title="Browserify lets you require('modules') in the browser by bundling up all of your dependencies"><h3>Browserify</h3></a><ul>
 <li>Install: <code>npm install --save extract-opts</code></li>
 <li>Module: <code>require('extract-opts')</code></li>
-<li>CDN URL: <code>//wzrd.in/bundle/extract-opts@3.3.0</code></li></ul>
+<li>CDN URL: <code>//wzrd.in/bundle/extract-opts@3.3.1</code></li></ul>
 
 <a href="http://enderjs.com" title="Ender is a full featured package manager for your browser"><h3>Ender</h3></a><ul>
 <li>Install: <code>ender add extract-opts</code></li>
