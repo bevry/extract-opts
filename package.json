@@ -56,7 +56,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/bevry/extract-opts.git"
+    "url": "https://github.com/bevry/extract-opts.git"
   },
   "engines": {
     "node": ">=0.10"
