@@ -90,7 +90,7 @@
   "browser": "es2015/index.js",
   "dependencies": {
     "eachr": "^3.2.0",
-    "editions": "^1.1.1",
+    "editions": "^2.2.0",
     "typechecker": "^4.3.0"
   },
   "devDependencies": {
