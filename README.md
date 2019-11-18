@@ -54,10 +54,9 @@ Extract the options and callback from a function's arguments easily
 
 <p>This package is published with the following editions:</p>
 
-<ul><li><code>extract-opts</code> aliases <code>extract-opts/index.js</code> which uses <a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a> to automatically select the correct edition for the consumers environment</li>
+<ul><li><code>extract-opts</code> aliases <code>extract-opts/source/index.js</code></li>
 <li><code>extract-opts/source/index.js</code> is esnext source code with require for modules</li>
-<li><code>extract-opts/edition-browsers/index.js</code> is esnext compiled for browsers with require for modules</li>
-<li><code>extract-opts/edition-node-0.10/index.js</code> is esnext compiled for node.js 0.10 with require for modules</li></ul>
+<li><code>extract-opts/edition-browsers/index.js</code> is esnext compiled for browsers with require for modules</li></ul>
 
 <!-- /INSTALL -->
 
@@ -156,7 +155,8 @@ These amazing people have contributed code to this project:
 
 <ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/extract-opts/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/extract-opts">view contributions</a></li>
 <li><a href="http://seanfridman.com">Sean Fridman</a> — <a href="https://github.com/bevry/extract-opts/commits?author=sfrdmn" title="View the GitHub contributions of Sean Fridman on repository bevry/extract-opts">view contributions</a></li>
-<li><a href="http://mattbierner.com">Matt Bierner</a> — <a href="https://github.com/bevry/extract-opts/commits?author=mjbvz" title="View the GitHub contributions of Matt Bierner on repository bevry/extract-opts">view contributions</a></li></ul>
+<li><a href="http://mattbierner.com">Matt Bierner</a> — <a href="https://github.com/bevry/extract-opts/commits?author=mjbvz" title="View the GitHub contributions of Matt Bierner on repository bevry/extract-opts">view contributions</a></li>
+<li><a href="http://github.com/apps/dependabot-preview">dependabot-preview[bot]</a> — <a href="https://github.com/bevry/extract-opts/commits?author=dependabot-preview[bot]" title="View the GitHub contributions of dependabot-preview[bot] on repository bevry/extract-opts">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/extract-opts/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
