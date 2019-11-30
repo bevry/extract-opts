@@ -81,7 +81,7 @@ function readFile (filename, opts, next) {
 // Test it
 readFile('package.json', log)          // works with no options
 readFile('package.json', null, log)    // works with null options
-readFile('package.json', {next: log})   // works with just options
+readFile('package.json', {next: log})  // works with just options
 ```
 
 ### Customisation
@@ -99,12 +99,12 @@ function extractOptsAndCallback (opts, next, config) {
 	return require('extract-opts')(opts, next, config)
 }
 
-# The readFile method as before
+// The readFile method as before
 
-# Test it
-readFile('package.json', {next: log})        # works the standard completion callback name
-readFile('package.json', {complete: log})    # works with our custom completion callback name
-readFile('package.json', {done: log})        # works with our custom completion callback name
+// Test it
+readFile('package.json', {next: log})        // works the standard completion callback name
+readFile('package.json', {complete: log})    // works with our custom completion callback name
+readFile('package.json', {done: log})        // works with our custom completion callback name
 ```
 
 
