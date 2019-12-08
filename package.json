@@ -100,7 +100,7 @@
   "browser": "edition-browsers/index.js",
   "dependencies": {
     "eachr": "^4.4.0",
-    "typechecker": "^5.1.0"
+    "typechecker": "^6.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.4",
