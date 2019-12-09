@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "MIT",
@@ -25,6 +25,7 @@
       "daviddm",
       "daviddmdev",
       "---",
+      "githubsponsors",
       "patreon",
       "flattr",
       "liberapay",
@@ -35,6 +36,7 @@
       "wishlist"
     ],
     "config": {
+      "githubSponsorsUsername": "balupton",
       "buymeacoffeeUsername": "balupton",
       "cryptoURL": "https://bevry.me/crypto",
       "flattrUsername": "balupton",
@@ -96,28 +98,29 @@
       }
     }
   ],
+  "type": "commonjs",
   "main": "source/index.js",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "eachr": "^4.4.0",
-    "typechecker": "^5.1.0"
+    "eachr": "^4.5.0",
+    "typechecker": "^6.2.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.7.4",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "assert-helpers": "^5.7.0",
-    "eachr": "^4.4.0",
+    "@babel/preset-env": "^7.7.6",
+    "assert-helpers": "^5.8.0",
+    "eachr": "^4.5.0",
     "eslint": "^6.7.2",
-    "eslint-config-bevry": "^2.1.0",
+    "eslint-config-bevry": "^2.2.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "kava": "^4.2.0",
+    "kava": "^4.3.0",
     "prettier": "^1.19.1",
-    "projectz": "^1.13.0",
-    "valid-directory": "^1.4.0"
+    "projectz": "^1.15.0",
+    "valid-directory": "^1.5.0"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
@@ -159,7 +162,7 @@
             "@babel/preset-env",
             {
               "targets": "defaults",
-              "modules": "commonjs"
+              "modules": false
             }
           ]
         ],
