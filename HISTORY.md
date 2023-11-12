@@ -1,5 +1,11 @@
 # History
 
+## v5.0.0 2023 November 13
+
+-   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
+-   Updated license from [`MIT`](http://spdx.org/licenses/MIT.html) to [`Artistic-2.0`](http://spdx.org/licenses/Artistic-2.0.html)
+-   Minimum required Node.js version changed from `node: >=8` to `node: >=4` adapting to ecosystem changes
+
 ## v4.3.0 2019 December 9
 
 -   Updated dependencies, [base files](https://github.com/bevry/base), and [editions](https://editions.bevry.me) using [boundation](https://github.com/bevry/boundation)
