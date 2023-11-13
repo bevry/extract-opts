@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "Artistic-2.0",
@@ -124,9 +124,9 @@
   "main": "index.cjs",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "eachr": "^6.0.0",
-    "editions": "^6.10.0",
-    "typechecker": "^8.0.0"
+    "eachr": "^6.1.0",
+    "editions": "^6.11.0",
+    "typechecker": "^8.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -134,14 +134,14 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.23.3",
     "@bevry/update-contributors": "^1.23.0",
-    "assert-helpers": "^11.1.0",
+    "assert-helpers": "^11.2.0",
     "eslint": "^8.53.0",
     "eslint-config-bevry": "^3.29.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "kava": "3.2.0",
-    "prettier": "^3.0.3",
+    "kava": "^7.0.0",
+    "prettier": "^3.1.0",
     "projectz": "^2.23.0",
     "valid-directory": "^4.1.0"
   },
@@ -176,7 +176,8 @@
   },
   "prettier": {
     "semi": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "trailingComma": "es5"
   },
   "babel": {
     "env": {
