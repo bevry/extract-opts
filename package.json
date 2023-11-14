@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "Artistic-2.0",
@@ -124,9 +124,9 @@
   "main": "index.cjs",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "eachr": "^6.1.0",
-    "editions": "^6.11.0",
-    "typechecker": "^8.1.0"
+    "eachr": "^6.3.0",
+    "editions": "^6.13.0",
+    "typechecker": "^8.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
@@ -134,19 +134,19 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.23.3",
     "@bevry/update-contributors": "^1.23.0",
-    "assert-helpers": "^11.2.0",
+    "assert-helpers": "^11.4.0",
     "eslint": "^8.53.0",
-    "eslint-config-bevry": "^3.29.0",
+    "eslint-config-bevry": "^4.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "kava": "^7.0.0",
+    "kava": "^7.1.0",
     "prettier": "^3.1.0",
-    "projectz": "^2.23.0",
-    "valid-directory": "^4.1.0"
+    "projectz": "^3.0.0",
+    "valid-directory": "^4.2.0"
   },
   "scripts": {
-    "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
+    "our:clean": "rm -rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
     "our:compile": "npm run our:compile:edition-browsers && npm run our:compile:edition-node-4",
     "our:compile:edition-browsers": "env BABEL_ENV=edition-browsers babel --out-dir ./edition-browsers ./source",
     "our:compile:edition-node-4": "env BABEL_ENV=edition-node-4 babel --out-dir ./edition-node-4 ./source && printf '%s' '{\"type\": \"commonjs\"}' > edition-node-4/package.json",
