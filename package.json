@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "5.4.1",
+  "version": "5.5.0",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "Artistic-2.0",
@@ -11,6 +11,7 @@
     "browser",
     "callback",
     "cb",
+    "es5",
     "esnext",
     "extract",
     "flow",
@@ -116,6 +117,7 @@
       "tags": [
         "compiled",
         "javascript",
+        "es5",
         "require"
       ],
       "engines": {
@@ -128,9 +130,9 @@
   "main": "index.cjs",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "eachr": "^7.1.0",
-    "editions": "^6.18.0",
-    "typechecker": "^9.1.0"
+    "eachr": "^7.2.0",
+    "editions": "^6.19.0",
+    "typechecker": "^9.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
@@ -138,7 +140,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.23.5",
     "@bevry/update-contributors": "^1.23.0",
-    "assert-helpers": "^11.8.0",
+    "assert-helpers": "^11.9.0",
     "eslint": "^8.55.0",
     "eslint-config-bevry": "^5.2.0",
     "eslint-config-prettier": "^9.1.0",
@@ -181,7 +183,8 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "endOfLine": "lf"
   },
   "babel": {
     "env": {
