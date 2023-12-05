@@ -95,7 +95,7 @@ readFile('package.json', { done: log }) // works with our custom completion call
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/extract-opts@5.4.0'
+    import * as pkg from '//dev.jspm.io/extract-opts@5.4.1'
 </script>
 ```
 

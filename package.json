@@ -1,7 +1,7 @@
 {
   "title": "Extract Options & Callback",
   "name": "extract-opts",
-  "version": "5.4.0",
+  "version": "5.4.1",
   "description": "Extract the options and callback from a function's arguments easily",
   "homepage": "https://github.com/bevry/extract-opts",
   "license": "Artistic-2.0",
@@ -128,26 +128,26 @@
   "main": "index.cjs",
   "browser": "edition-browsers/index.js",
   "dependencies": {
-    "eachr": "^6.6.0",
-    "editions": "^6.16.0",
-    "typechecker": "^8.5.0"
+    "eachr": "^7.1.0",
+    "editions": "^6.18.0",
+    "typechecker": "^9.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
-    "@babel/core": "^7.23.3",
+    "@babel/core": "^7.23.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
-    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-env": "^7.23.5",
     "@bevry/update-contributors": "^1.23.0",
-    "assert-helpers": "^11.6.0",
-    "eslint": "^8.54.0",
+    "assert-helpers": "^11.8.0",
+    "eslint": "^8.55.0",
     "eslint-config-bevry": "^5.2.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-prettier": "^5.0.1",
-    "kava": "^7.3.0",
+    "kava": "^7.4.0",
     "prettier": "^3.1.0",
-    "projectz": "^3.3.0",
-    "valid-directory": "^4.5.0"
+    "projectz": "^3.4.0",
+    "valid-directory": "^4.6.0"
   },
   "scripts": {
     "our:clean": "rm -rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",

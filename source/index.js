@@ -2,7 +2,7 @@
 
 // Import
 const typeChecker = require('typechecker')
-const eachr = require('eachr')
+const eachr = require('eachr').default
 
 // Define
 module.exports = function (opts, next, config = {}) {

@@ -4,7 +4,7 @@
 // Import
 const deepEqual = require('assert-helpers').deepEqual
 const kava = require('kava')
-const eachr = require('eachr')
+const eachr = require('eachr').default
 const extractOpts = require('./')
 
 // Test
