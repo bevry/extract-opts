@@ -92,7 +92,7 @@ readFile('package.json', { done: log }) // works with our custom completion call
 
 ``` html
 <script type="module">
-    import * as pkg from '//dev.jspm.io/extract-opts@5.8.0'
+    import * as pkg from '//dev.jspm.io/extract-opts@5.9.0'
 </script>
 ```
 ### [Editions](https://editions.bevry.me "Editions are the best way to produce and consume packages you care about.")
@@ -174,7 +174,7 @@ This package is published with the following editions:
 -   [Mohammed Shah](https://github.com/smashah)
 -   [Mr. Henry](https://mrhenry.be)
 -   [Nermal](https://arjunaditya.vercel.app)
--   [Pleo](https://www.pleo.io)
+-   [Pleo](https://pleo.io)
 -   [Poonacha Medappa](https://poonachamedappa.com)
 -   [Rob Morris](https://github.com/Rob-Morris)
 -   [Robert de Forest](https://github.com/rdeforest)
